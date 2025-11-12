@@ -46,7 +46,13 @@ def main():
 
     cache = {}
     p1 = evaluate(circuit, "a", cache)
-    print(p1)
+    print(f"Part one: {p1}")
+
+    circuit["b"] = str(p1)
+
+    cache = {}
+    p2 = evaluate(circuit, "a", cache)
+    print(f"Part one: {p2}")
 
 
 if __name__ == "__main__":
