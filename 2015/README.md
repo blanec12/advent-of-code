@@ -14,6 +14,22 @@ From the `2015` directory run this command:
 uv sync
 ```
 
+## Input
+
+Copy your puzzle input to the clipboard, then run:
+
+```bash
+uv run python save_input.py --day 1
+```
+
+Paste your input and press `Ctrl-D` to save it to the corresponding day's `input.txt`.
+
+For example, `--day 1` saves the input to:
+
+```bash
+day01/input.txt
+```
+
 ## Run
 
 Run solutions from the `2015` directory:
@@ -24,10 +40,3 @@ uv run python -m day01.solution
 
 Replace `day01` with the day you want to run.
 
-## Input
-
-Puzzle input is stored in `input.txt` inside each day's directory:
-
-`day01/input.txt`
-
-Input files are purposely excluded from version control.
