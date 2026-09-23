@@ -1,5 +1,6 @@
-with open("/home/bcummings/repos/advent-of-code/2015/02/input.txt", "r") as f:
-    dimensions = f.read().splitlines()
+from aoc import read_lines
+
+dimensions = read_lines(__file__)
 
 total_paper = 0
 total_ribbon = 0

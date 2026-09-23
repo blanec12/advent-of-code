@@ -1,5 +1,6 @@
-with open("/home/bcummings/repos/advent-of-code/2015/03/input.txt", "r") as f:
-    directions = f.readline().strip()
+from aoc import read_input
+
+directions = read_input(__file__)
 
 coordinates = {
     "^": (0, 1),
@@ -8,7 +9,8 @@ coordinates = {
     "<": (-1, 0),
 }
 
-def deliver_presents(directions, num_people=1): 
+
+def deliver_presents(directions, num_people=1):
     people = [[0, 0] for _ in range(num_people)]
     visited = set()
     visited.add((0, 0))
@@ -20,6 +22,7 @@ def deliver_presents(directions, num_people=1):
         visited.add(tuple(person))
 
     return visited
+
 
 part1 = len(deliver_presents(directions))
 print(part1)

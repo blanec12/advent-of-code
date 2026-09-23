@@ -1,5 +1,6 @@
-with open("/home/bcummings/repos/advent-of-code/2015/01/input.txt", "r") as f:
-    directions = f.read().strip()
+from aoc import read_input
+
+directions = read_input(__file__)
 
 floor = 0
 first_basement_pos = None

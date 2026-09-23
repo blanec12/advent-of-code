@@ -1,3 +1,5 @@
+from aoc import read_lines
+
 import re
 
 
@@ -25,8 +27,7 @@ def is_nice2(s):
 
 
 def main():
-    with open("/home/bcummings/repos/advent-of-code/2015/05/input.txt", "r") as f:
-        strings = f.read().splitlines()
+    strings = read_lines(__file__)
 
     num_nice_strings_p1 = 0
     num_nice_strings_p2 = 0

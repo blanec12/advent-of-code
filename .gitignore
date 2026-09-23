@@ -1,2 +1,11 @@
-*/input.txt
-*/prompt.txt
+# Advent of Code
+**/input.txt
+**/prompt.txt
+
+# Python
+__pycache__/
+*.py[cod]
+
+
+# Virtual Environments
+.venv/

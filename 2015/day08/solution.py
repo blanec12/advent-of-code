@@ -1,3 +1,6 @@
+from aoc import read_lines
+
+
 def decode(s):
     s = s[1:-1]
 
@@ -35,16 +38,18 @@ def encode(s):
     return total
 
 
+data = read_lines(__file__)
+
 total_code = 0
 total_mem = 0
 total_encoded = 0
 
-with open("input.txt", "r") as f:
-    for line in f:
-        line = line.strip()
-        total_code += len(line)
-        total_mem += decode(line)
-        total_encoded += encode(line)
+for line in data:
+    line = line.strip()
+    total_code += len(line)
+    total_mem += decode(line)
+    total_encoded += encode(line)
+
 
 print(f"part 1: {total_code - total_mem}")
 print(f"part 2: {total_encoded - total_code}")

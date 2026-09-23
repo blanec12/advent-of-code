@@ -1,3 +1,6 @@
+from aoc import read_lines
+
+
 def evaluate(circuit, output, cache):
     if output in cache:
         return cache[output]
@@ -36,8 +39,7 @@ def evaluate(circuit, output, cache):
 
 
 def main():
-    with open("/home/bcummings/repos/advent-of-code/2015/07/input.txt", "r") as f:
-        instructions = f.read().splitlines()
+    instructions = read_lines(__file__)
 
     circuit = {}
     for line in instructions:

@@ -1,3 +1,6 @@
+from aoc import read_lines
+
+
 def parse_instruction(line):
     if line.startswith("toggle"):
         action = "toggle"
@@ -46,17 +49,16 @@ def apply_instruction(grid, action, p1, p2):
 
 
 def main():
-    with open("/home/bcummings/repos/advent-of-code/2015/06/input.txt", "r") as f:
-        instructions = f.read().splitlines()
+    instructions = read_lines(__file__)
 
-        grid = [[0 for _ in range(1000)] for _ in range(1000)]
+    grid = [[0 for _ in range(1000)] for _ in range(1000)]
 
-        for line in instructions:
-            action, p1, p2 = parse_instruction(line)
-            apply_instruction(grid, action, p1, p2)
+    for line in instructions:
+        action, p1, p2 = parse_instruction(line)
+        apply_instruction(grid, action, p1, p2)
 
-        total_on = sum(sum(row) for row in grid)
-        print(total_on)
+    total_on = sum(sum(row) for row in grid)
+    print(total_on)
 
 
 if __name__ == "__main__":
