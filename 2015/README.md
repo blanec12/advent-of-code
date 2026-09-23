@@ -14,15 +14,23 @@ From the `2015` directory run this command:
 uv sync
 ```
 
+Create a `.env` file in the `2015` directory, and add your Advent of Code session cookie:
+
+```bash
+AOC_SESSION_COOKIE=<your-session-cookie>
+```
+
+Find your session cookie in your browser's dev tools while logged into Advent of Code.
+
 ## Input
 
-Copy your puzzle input to the clipboard, then run:
+Run `save_input.py` from the `2015` directory:
 
 ```bash
 uv run python save_input.py --day 1
 ```
 
-Paste your input and press `Ctrl-D` to save it to the corresponding day's `input.txt`.
+This downloads your puzzle input for the specified day and saves it to the corresponding directory.
 
 For example, `--day 1` saves the input to:
 
