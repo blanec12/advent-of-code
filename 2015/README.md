@@ -19,7 +19,7 @@ uv sync
 Run solutions from the `2015` directory:
 
 ```bash
-uv run python day01/solution.py
+uv run python -m day01.solution
 ```
 
 Replace `day01` with the day you want to run.
