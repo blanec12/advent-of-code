@@ -1,4 +1,5 @@
 from aoc import read_lines
+import re
 
 
 def find_all_positions(element: str, molecule: str) -> list[tuple[int, int]]:
@@ -24,13 +25,26 @@ def distinct_molecules(replacements: list[str], molecule: str) -> set[str]:
     return molecules
 
 
+def minimum_steps(molecule: str) -> int | None:
+    elements = re.findall(r"[A-Z][a-z]?", molecule)
+
+    return (
+        len(elements)
+        - elements.count("Rn")
+        - elements.count("Ar")
+        - 2 * elements.count("Y")
+        - 1
+    )
+
+
 def main():
 
     data = read_lines(__file__)
 
     replacements, molecule = data[:-2], data[-1]
 
-    print(len(distinct_molecules(replacements, molecule)))
+    print("Part1: ", len(distinct_molecules(replacements, molecule)))
+    print("Part2: ", minimum_steps(molecule))
 
 
 if __name__ == "__main__":
